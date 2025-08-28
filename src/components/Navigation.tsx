@@ -1,22 +1,30 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Calendar } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
-    { label: "Início", href: "/" },
-    { label: "Sobre", href: "/#about" },
-    { label: "Serviços", href: "/#services" },
-    { label: "Equipe", href: "/#team" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contato", href: "/#contact" },
+    { label: "Início", href: "/", type: "route" },
+    { label: "Sobre", href: "about", type: "anchor" },
+    { label: "Serviços", href: "services", type: "anchor" },
+    { label: "Equipe", href: "team", type: "anchor" },
+    { label: "Blog", href: "/blog", type: "route" },
+    { label: "Contato", href: "contact", type: "anchor" },
   ];
 
-  const handleNavigation = (href: string) => {
-    console.log(`Navigating to ${href} from ${window.location.pathname}`);
-    window.location.href = href;
+  const handleAnchorClick = (anchor: string) => {
+    // Always go to home first, then scroll to section
+    navigate("/");
+    setTimeout(() => {
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
@@ -24,24 +32,34 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button onClick={() => handleNavigation("/")} className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
               alt="Relive Odontologia e Estética"
               className="h-8 w-auto"
             />
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleNavigation(item.href)}
-                className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-              >
-                {item.label}
-              </button>
+              item.type === "anchor" ? (
+                <button
+                  key={item.label}
+                  onClick={() => handleAnchorClick(item.href)}
+                  className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </div>
 
@@ -77,16 +95,27 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    handleNavigation(item.href);
-                  }}
-                  className="block w-full text-left text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                >
-                  {item.label}
-                </button>
+                item.type === "anchor" ? (
+                  <button
+                    key={item.label}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      handleAnchorClick(item.href);
+                    }}
+                    className="block w-full text-left text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
               <div className="pt-4 space-y-2">
                 <Button variant="ghost" size="sm" className="w-full justify-start">
