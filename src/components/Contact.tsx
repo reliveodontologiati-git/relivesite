@@ -120,7 +120,7 @@ const Contact = () => {
                   <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3" asChild>
                     <a href="https://instagram.com/relive.odontoestetica" target="_blank" rel="noopener noreferrer">
                       <Instagram className="h-5 w-5" />
-                      <span className="text-xs">@relive.odontoestetica</span>
+                      <span className="text-xs">Instagram</span>
                     </a>
                   </Button>
                   <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3">
