@@ -18,13 +18,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-playfair font-bold text-gradient-elegant">
-              relive
-            </h1>
-            <span className="text-sm text-muted-foreground font-montserrat">
-              Odontologia
-            </span>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
+              alt="Relive Odontologia e Estética"
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

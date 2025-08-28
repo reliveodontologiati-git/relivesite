@@ -35,12 +35,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1 space-y-6">
             <div>
-              <h3 className="text-3xl font-playfair font-bold text-gradient-elegant mb-2">
-                relive
-              </h3>
-              <p className="text-sm text-gray-300 font-bulgari tracking-wide">
-                Odontologia e Estética
-              </p>
+              <img 
+                src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
+                alt="Relive Odontologia e Estética"
+                className="h-16 w-auto mb-4 brightness-0 invert"
+              />
               <p className="text-xs text-gray-400 mt-2">
                 Sorrir com Saúde, Realçar sua Beleza
               </p>
