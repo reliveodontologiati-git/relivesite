@@ -115,18 +115,18 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex gap-3">
-                  <Button variant="outline-elegant" size="sm" className="flex-1">
-                    <Instagram className="h-4 w-4 mr-2" />
-                    Instagram
+                <div className="grid grid-cols-3 gap-2">
+                  <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3">
+                    <Instagram className="h-5 w-5" />
+                    <span className="text-xs">Instagram</span>
                   </Button>
-                  <Button variant="outline-elegant" size="sm" className="flex-1">
-                    <Facebook className="h-4 w-4 mr-2" />
-                    Facebook
+                  <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3">
+                    <Facebook className="h-5 w-5" />
+                    <span className="text-xs">Facebook</span>
                   </Button>
-                  <Button variant="outline-elegant" size="sm" className="flex-1">
-                    <Youtube className="h-4 w-4 mr-2" />
-                    YouTube
+                  <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3">
+                    <Youtube className="h-5 w-5" />
+                    <span className="text-xs">YouTube</span>
                   </Button>
                 </div>
               </CardContent>

@@ -62,21 +62,6 @@ const Hero = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-warm-brown/20 to-transparent"></div>
             </div>
-            
-            {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-warm border border-border">
-              <div className="space-y-2">
-                <h3 className="font-playfair font-semibold text-warm-brown">
-                  Inicie seu tratamento ortodôntico
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  E ganhe uma limpeza dental
-                </p>
-                <p className="text-2xl font-bulgari text-primary">
-                  GRÁTIS
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
