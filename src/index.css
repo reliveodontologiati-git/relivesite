@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Clínica Relive - Design System
+Australian Shepherd Inspired Color Palette
+Typography: Playfair Display, BULGARI, Montserrat
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Australian Shepherd Inspired Colors */
+    --background: 30 15% 98%;
+    --foreground: 20 10% 15%;
 
+    /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Rich brown (Australian Shepherd coat) */
+    --primary: 25 35% 25%;
+    --primary-foreground: 30 15% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm beige/caramel */
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 25 35% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Light grays */
+    --muted: 200 10% 92%;
+    --muted-foreground: 200 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Blue-gray (cool tones) */
+    --accent: 200 15% 70%;
+    --accent-foreground: 20 10% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Elegant warm tones */
+    --warm-brown: 25 35% 25%;
+    --caramel: 35 30% 75%;
+    --blue-gray: 200 15% 70%;
+    --warm-beige: 35 25% 88%;
+    --soft-gray: 200 10% 92%;
+    --charcoal: 200 8% 20%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(35 25% 88%), hsl(35 30% 75%));
+    --gradient-elegant: linear-gradient(135deg, hsl(25 35% 25%), hsl(200 15% 70%));
+    --gradient-soft: linear-gradient(180deg, hsl(30 15% 98%), hsl(35 25% 88%));
 
-    --radius: 0.5rem;
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(25 35% 25% / 0.15);
+    --shadow-soft: 0 4px 20px -5px hsl(200 8% 20% / 0.1);
+    --shadow-warm: 0 8px 30px -8px hsl(35 30% 75% / 0.3);
+
+    /* Destructive */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border and input */
+    --border: 200 15% 85%;
+    --input: 200 15% 85%;
+    --ring: 25 35% 25%;
+
+    /* Radius */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,69 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+  .font-bulgari {
+    font-family: 'BULGARI', 'Playfair Display', serif;
+    letter-spacing: 0.05em;
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-elegant {
+    background: var(--gradient-elegant);
+  }
+
+  .gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+
+  .text-gradient-elegant {
+    background: var(--gradient-elegant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--soft-gray));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--warm-brown));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--charcoal));
   }
 }

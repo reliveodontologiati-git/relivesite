@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'bulgari': ['BULGARI', 'Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +66,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'warm-brown': 'hsl(var(--warm-brown))',
+				'caramel': 'hsl(var(--caramel))',
+				'blue-gray': 'hsl(var(--blue-gray))',
+				'warm-beige': 'hsl(var(--warm-beige))',
+				'soft-gray': 'hsl(var(--soft-gray))',
+				'charcoal': 'hsl(var(--charcoal))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

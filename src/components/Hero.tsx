@@ -1,0 +1,90 @@
+import { Button } from "@/components/ui/button";
+import { Calendar, Phone, MapPin } from "lucide-react";
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center gradient-soft">
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Hero Content */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-6xl lg:text-7xl font-playfair font-bold text-gradient-elegant">
+                relive
+              </h1>
+              <h2 className="text-3xl lg:text-4xl font-playfair italic text-warm-brown">
+                Odontologia e Estética
+              </h2>
+              <p className="text-xl font-bulgari text-charcoal tracking-wide">
+                Sorrir com Saúde, Realçar sua Beleza
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Oferecemos excelência em odontologia e estética, promovendo autoestima 
+                e bem-estar através de tratamentos inovadores e cuidado humanizado.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="hero" size="lg" className="group">
+                  <Calendar className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Agendar Consulta
+                </Button>
+                <Button variant="outline-elegant" size="lg">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Entre em Contato
+                </Button>
+              </div>
+            </div>
+
+            {/* Quick Contact Info */}
+            <div className="flex flex-wrap gap-6 pt-8 border-t border-border">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4 text-warm-brown" />
+                <span>(11) 9999-9999</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 text-warm-brown" />
+                <span>São Paulo, SP</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-elegant">
+              <img 
+                src="/lovable-uploads/c286323d-1e25-4866-bdef-eff14537808c.png"
+                alt="Paciente sorrindo - Clínica Relive"
+                className="w-full h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-warm-brown/20 to-transparent"></div>
+            </div>
+            
+            {/* Floating Card */}
+            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-warm border border-border">
+              <div className="space-y-2">
+                <h3 className="font-playfair font-semibold text-warm-brown">
+                  Inicie seu tratamento ortodôntico
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  E ganhe uma limpeza dental
+                </p>
+                <p className="text-2xl font-bulgari text-primary">
+                  GRÁTIS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-elegant opacity-10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-warm opacity-20 rounded-full blur-2xl"></div>
+    </section>
+  );
+};
+
+export default Hero;
