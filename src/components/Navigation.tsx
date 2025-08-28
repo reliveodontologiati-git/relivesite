@@ -36,7 +36,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
               alt="Relive Odontologia e Estética"
-              className="h-12 md:h-14 w-auto"
+              className="h-24 md:h-28 w-auto"
             />
             <span className="text-lg font-semibold text-foreground">
               Odontologia e Estética
