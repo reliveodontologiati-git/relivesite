@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { 
   Calendar, 
   Clock, 
@@ -115,9 +117,11 @@ const Blog = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Header */}
-      <section className="py-16 gradient-soft">
+      <section className="py-16 gradient-soft mt-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">
@@ -265,6 +269,8 @@ const Blog = () => {
           </Card>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
