@@ -31,21 +31,14 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.type === "anchor" ? (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                  onClick={(e) => {
-                    // If we're not on the home page, navigate to home first
-                    if (window.location.pathname !== '/') {
-                      e.preventDefault();
-                      window.location.href = item.href;
-                    }
-                  }}
-                >
-                  {item.label}
-                </a>
+               item.type === "anchor" ? (
+                 <a
+                   key={item.label}
+                   href={item.href}
+                   className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                 >
+                   {item.label}
+                 </a>
               ) : (
                 <Link
                   key={item.label}
@@ -90,22 +83,15 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="space-y-4">
               {navItems.map((item) => (
-                item.type === "anchor" ? (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                    onClick={(e) => {
-                      setIsMenuOpen(false);
-                      // If we're not on the home page, navigate to home first
-                      if (window.location.pathname !== '/') {
-                        e.preventDefault();
-                        window.location.href = item.href;
-                      }
-                    }}
-                  >
-                    {item.label}
-                  </a>
+                 item.type === "anchor" ? (
+                   <a
+                     key={item.label}
+                     href={item.href}
+                     className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                     onClick={() => setIsMenuOpen(false)}
+                   >
+                     {item.label}
+                   </a>
                 ) : (
                   <Link
                     key={item.label}
