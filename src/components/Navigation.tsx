@@ -38,9 +38,9 @@ const Navigation = () => {
               alt="Relive Odontologia e Estética"
               className="h-24 md:h-28 w-auto"
             />
-            <span className="text-sm md:text-lg font-semibold text-foreground">
+            {/* <span className="text-sm md:text-lg font-semibold text-foreground">
               Odontologia e Estética
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
