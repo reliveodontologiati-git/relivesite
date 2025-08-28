@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Map from "./Map";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -221,21 +222,17 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map Placeholder */}
+        {/* Interactive Map */}
         <div className="mt-16">
-          <Card className="border-0 shadow-elegant overflow-hidden">
-            <div className="h-64 bg-gradient-to-r from-warm-beige to-caramel flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-warm-brown mx-auto mb-4" />
-                <h3 className="font-playfair font-semibold text-warm-brown mb-2">
-                  Nossa Localização
-                </h3>
-                <p className="text-muted-foreground">
-                  Mapa interativo será integrado aqui
-                </p>
-              </div>
-            </div>
-          </Card>
+          <div className="text-center mb-8">
+            <h3 className="font-playfair font-semibold text-warm-brown text-2xl mb-2">
+              Nossa Localização
+            </h3>
+            <p className="text-muted-foreground">
+              Venha nos visitar em nossa clínica
+            </p>
+          </div>
+          <Map />
         </div>
       </div>
     </section>
