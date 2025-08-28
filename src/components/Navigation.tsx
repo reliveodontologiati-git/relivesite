@@ -1,53 +1,47 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Início", href: "/", type: "route" },
-    { label: "Sobre", href: "/#about", type: "anchor" },
-    { label: "Serviços", href: "/#services", type: "anchor" },
-    { label: "Equipe", href: "/#team", type: "anchor" },
-    { label: "Blog", href: "/blog", type: "route" },
-    { label: "Contato", href: "/#contact", type: "anchor" },
+    { label: "Início", href: "/" },
+    { label: "Sobre", href: "/#about" },
+    { label: "Serviços", href: "/#services" },
+    { label: "Equipe", href: "/#team" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contato", href: "/#contact" },
   ];
+
+  const handleNavigation = (href: string) => {
+    console.log(`Navigating to ${href} from ${window.location.pathname}`);
+    window.location.href = href;
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <button onClick={() => handleNavigation("/")} className="flex items-center">
             <img 
               src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
               alt="Relive Odontologia e Estética"
               className="h-8 w-auto"
             />
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-               item.type === "anchor" ? (
-                 <a
-                   key={item.label}
-                   href={item.href}
-                   className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                 >
-                   {item.label}
-                 </a>
-              ) : (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                >
-                  {item.label}
-                </Link>
-              )
+              <button
+                key={item.label}
+                onClick={() => handleNavigation(item.href)}
+                className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+              >
+                {item.label}
+              </button>
             ))}
           </div>
 
@@ -83,25 +77,16 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="space-y-4">
               {navItems.map((item) => (
-                 item.type === "anchor" ? (
-                   <a
-                     key={item.label}
-                     href={item.href}
-                     className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                     onClick={() => setIsMenuOpen(false)}
-                   >
-                     {item.label}
-                   </a>
-                ) : (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )
+                <button
+                  key={item.label}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleNavigation(item.href);
+                  }}
+                  className="block w-full text-left text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                >
+                  {item.label}
+                </button>
               ))}
               <div className="pt-4 space-y-2">
                 <Button variant="ghost" size="sm" className="w-full justify-start">
