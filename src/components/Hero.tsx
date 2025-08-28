@@ -58,7 +58,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/c286323d-1e25-4866-bdef-eff14537808c.png"
                 alt="Paciente sorrindo - Clínica Relive"
-                className="w-full h-[500px] md:h-[400px] object-cover object-center"
+                className="w-full h-[600px] md:h-[700px] object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-warm-brown/20 to-transparent"></div>
             </div>
