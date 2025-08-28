@@ -43,22 +43,22 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Endereço",
-      content: ["Rua das Flores, 123", "Centro - São Paulo, SP", "CEP: 01234-567"]
+      content: ["R. Cel. João Leme, 460 - sala 104 - 1º andar", "Edifício New York", "Bragança Paulista - SP"]
     },
     {
       icon: <Phone className="h-6 w-6" />,
-      title: "Telefones",
-      content: ["(11) 9999-9999", "(11) 3333-3333", "WhatsApp: (11) 9999-9999"]
+      title: "Contato",
+      content: ["Celular: (11) 96829-6877", "WhatsApp: (11) 96829-6877"]
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "E-mail",
-      content: ["contato@reliveodonto.com.br", "agendamento@reliveodonto.com.br"]
+      content: ["relive@gmail.com"]
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Horários",
-      content: ["Segunda - Sexta: 8h às 19h", "Sábados: 8h às 14h", "Emergências: 24h"]
+      content: ["Segunda a sexta: 9:00 às 11:30 e 14:00 às 18:30", "Sábado: 9:00 às 12:00"]
     }
   ];
 
@@ -117,9 +117,11 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-3 gap-2">
-                  <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3">
-                    <Instagram className="h-5 w-5" />
-                    <span className="text-xs">Instagram</span>
+                  <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3" asChild>
+                    <a href="https://instagram.com/relive.odontoestetica" target="_blank" rel="noopener noreferrer">
+                      <Instagram className="h-5 w-5" />
+                      <span className="text-xs">@relive.odontoestetica</span>
+                    </a>
                   </Button>
                   <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3">
                     <Facebook className="h-5 w-5" />
