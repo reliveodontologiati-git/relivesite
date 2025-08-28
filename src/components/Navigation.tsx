@@ -32,12 +32,15 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
               alt="Relive Odontologia e Estética"
               className="h-8 w-auto"
             />
+            <span className="text-lg font-semibold text-foreground">
+              Odontologia e Estética
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
