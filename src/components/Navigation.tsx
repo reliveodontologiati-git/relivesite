@@ -56,6 +56,12 @@ const Navigation = () => {
                   key={item.label}
                   to={item.href}
                   className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                  onClick={() => {
+                    if (item.href === "/") {
+                      // Scroll to top when going to home
+                      setTimeout(() => window.scrollTo(0, 0), 100);
+                    }
+                  }}
                 >
                   {item.label}
                 </Link>
@@ -111,7 +117,13 @@ const Navigation = () => {
                     key={item.label}
                     to={item.href}
                     className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      if (item.href === "/") {
+                        // Scroll to top when going to home
+                        setTimeout(() => window.scrollTo(0, 0), 100);
+                      }
+                    }}
                   >
                     {item.label}
                   </Link>
