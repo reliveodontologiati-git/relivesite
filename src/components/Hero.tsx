@@ -9,12 +9,14 @@ const Hero = () => {
           {/* Hero Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="w-64 h-auto">
-                <img 
-                  src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
-                  alt="Relive Odontologia e Estética"
-                  className="w-full h-auto"
-                />
+              <div className="flex justify-center">
+                <div className="w-64 h-auto">
+                  <img 
+                    src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
+                    alt="Relive Odontologia e Estética"
+                    className="w-full h-auto justify-center"
+                  />
+                </div>
               </div>
               <p className="text-xl font-bulgari text-charcoal tracking-wide">
                 Sorrir com Saúde, Realçar sua Beleza
