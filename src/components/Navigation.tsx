@@ -39,7 +39,7 @@ const Navigation = () => {
               className="h-24 md:h-28 w-auto"
             />
             <span className="text-sm md:text-lg font-semibold text-foreground">
-              Clinica Odontologia e Estética
+              Relive - Sorrisos & Beleza
             </span>
           </Link>
 
