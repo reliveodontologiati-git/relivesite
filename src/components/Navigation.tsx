@@ -34,7 +34,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
+              src="/lovable-uploads/4a1b38df-394f-47db-99c2-024a2908e487.png"
               alt="Relive Odontologia e Estética"
               className="h-24 md:h-28 w-auto"
             />
