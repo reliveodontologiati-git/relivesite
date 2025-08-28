@@ -7,12 +7,12 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Início", href: "/" },
-    { label: "Sobre", href: "/#about" },
-    { label: "Serviços", href: "/#services" },
-    { label: "Equipe", href: "/#team" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contato", href: "/#contact" },
+    { label: "Início", href: "/", type: "route" },
+    { label: "Sobre", href: "/#about", type: "anchor" },
+    { label: "Serviços", href: "/#services", type: "anchor" },
+    { label: "Equipe", href: "/#team", type: "anchor" },
+    { label: "Blog", href: "/blog", type: "route" },
+    { label: "Contato", href: "/#contact", type: "anchor" },
   ];
 
   return (
@@ -31,11 +31,18 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.href.startsWith("/#") ? (
+              item.type === "anchor" ? (
                 <a
                   key={item.label}
                   href={item.href}
                   className="text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
+                  onClick={(e) => {
+                    // If we're not on the home page, navigate to home first
+                    if (window.location.pathname !== '/') {
+                      e.preventDefault();
+                      window.location.href = item.href;
+                    }
+                  }}
                 >
                   {item.label}
                 </a>
@@ -83,12 +90,19 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="space-y-4">
               {navItems.map((item) => (
-                item.href.startsWith("/#") ? (
+                item.type === "anchor" ? (
                   <a
                     key={item.label}
                     href={item.href}
                     className="block text-sm font-medium text-foreground hover:text-warm-brown transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      setIsMenuOpen(false);
+                      // If we're not on the home page, navigate to home first
+                      if (window.location.pathname !== '/') {
+                        e.preventDefault();
+                        window.location.href = item.href;
+                      }
+                    }}
                   >
                     {item.label}
                   </a>
