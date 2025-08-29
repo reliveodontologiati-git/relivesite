@@ -126,9 +126,9 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-caramel mt-1 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <p>Rua das Flores, 123</p>
-                  <p>Centro - São Paulo, SP</p>
-                  <p>CEP: 01234-567</p>
+                  <p>R. Cel. João Leme, 460 - sala 104 - 1º andar</p>
+                  <p>Edifício New York</p>
+                  <p>Bragança Paulista - SP</p>
                 </div>
               </div>
               
@@ -136,22 +136,22 @@ const Footer = () => {
                 <Phone className="h-4 w-4 text-caramel mt-1 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
                   <p>(11) 96829-6877</p>
-                  <p>(11) 3333-3333</p>
+                  <p>(11) 3403-3223</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <Mail className="h-4 w-4 text-caramel mt-1 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <p>contato@reliveodonto.com.br</p>
+                  <p>dr.stanleyrangel@gmail.com</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <Clock className="h-4 w-4 text-caramel mt-1 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <p>Segunda - Sexta: 8h às 19h</p>
-                  <p>Sábados: 8h às 14h</p>
+                  <p>Segunda a sexta: 9:00 às 11:30 e 14:00 às 18:30</p>
+                  <p>Sábado: 9:00 às 12:00</p>
                 </div>
               </div>
             </div>
