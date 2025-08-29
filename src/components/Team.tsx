@@ -28,11 +28,11 @@ const Team = () => {
       experience: "15 anos"
     },
     {
-      name: "Dra. Juliana Costa",
-      role: "Esteticista",
-      specialty: "Estética Facial e Corporal",
-      image: "https://images.unsplash.com/photo-1594824863829-d58c26d9ee79?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      credentials: ["CREF 345678", "Especialista em Estética", "Curso de Harmonização Facial"],
+      name: "Dra. Nubia Campos",
+      role: "Enfermeira Esteta",
+      specialty: "Harmonização Corporal e Laserterapia",
+      image: "/lovable-uploads/2a35d284-6419-4109-a9e2-a5aa03ffcfb0.png",
+      credentials: ["Coren 755072", "Especialista em Harmonização Corporal", "Especialista em Laserterapia"],
       experience: "8 anos"
     },
     {

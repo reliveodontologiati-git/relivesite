@@ -15,7 +15,8 @@ import {
   Send,
   Instagram,
   Facebook,
-  Youtube 
+  Youtube,
+  Award
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -48,12 +49,12 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Contato",
-      content: ["Celular: (11) 96829-6877", "WhatsApp: (11) 96829-6877"]
+      content: ["Celular: (11) 96829-6877", "WhatsApp: (11) 96829-6877", "Fixo: (11) 3403-3223"]
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "E-mail",
-      content: ["relive@gmail.com"]
+      content: ["dr.stanleyrangel@gmail.com"]
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -73,10 +74,21 @@ const Contact = () => {
           <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-warm-brown mb-6">
             Entre em Contato Conosco
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             Estamos prontos para cuidar do seu sorriso. Entre em contato e agende 
             sua consulta ou tire suas dúvidas.
           </p>
+          <div className="mb-4">
+            <a 
+              href="https://share.google/gkHh0r6wKNP72oAxl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-warm-brown hover:text-warm-brown/80 transition-colors"
+            >
+              <Award className="h-4 w-4" />
+              Avaliação média de 4.9/5 no Google
+            </a>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
@@ -118,7 +130,7 @@ const Contact = () => {
               <CardContent>
                 <div className="grid grid-cols-3 gap-2">
                   <Button variant="outline-elegant" size="sm" className="flex flex-col gap-1 h-auto py-3" asChild>
-                    <a href="https://instagram.com/relive.odontoestetica" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/relive.odontoestetica?igsh=bGRudDg1bGQyOTZ3" target="_blank" rel="noopener noreferrer">
                       <Instagram className="h-5 w-5" />
                       <span className="text-xs">Instagram</span>
                     </a>
