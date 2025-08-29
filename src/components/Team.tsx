@@ -12,14 +12,6 @@ import {
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dra. Ana Carolina Silva",
-      role: "Cirurgiã-Dentista",
-      specialty: "Ortodontia e Harmonização Facial",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      credentials: ["CRO-SP 123456", "Especialista em Ortodontia", "Pós-graduação em Harmonização"],
-      experience: "12 anos"
-    },
-    {
       name: "Dr. Rafael Mendes",
       role: "Cirurgião-Dentista",
       specialty: "Implantodontia e Próteses",
@@ -34,14 +26,6 @@ const Team = () => {
       image: "/lovable-uploads/2a35d284-6419-4109-a9e2-a5aa03ffcfb0.png",
       credentials: ["Coren 755072", "Especialista em Harmonização Corporal", "Especialista em Laserterapia"],
       experience: "8 anos"
-    },
-    {
-      name: "Dr. Carlos Oliveira",
-      role: "Cirurgião-Dentista",
-      specialty: "Periodontia e Endodontia",
-      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      credentials: ["CRO-SP 456789", "Especialista em Periodontia", "Pós-graduação em Endodontia"],
-      experience: "10 anos"
     }
   ];
 
