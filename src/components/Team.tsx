@@ -118,10 +118,13 @@ const Team = () => {
                   </div>
                 </div>
 
+                {/* Botão de agendamento escondido conforme solicitado */}
+                {/*
                 <Button variant="ghost" size="sm" className="w-full">
                   <Calendar className="h-4 w-4 mr-2" />
                   Agendar Consulta
                 </Button>
+                */}
               </CardContent>
             </Card>
           ))}

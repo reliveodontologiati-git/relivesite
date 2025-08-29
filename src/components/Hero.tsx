@@ -29,6 +29,8 @@ const Hero = () => {
                 e bem-estar através de tratamentos inovadores e cuidado humanizado.
               </p>
 
+              {/* Botões escondidos conforme solicitado */}
+              {/* 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="lg" className="group">
                   <Calendar className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -39,13 +41,14 @@ const Hero = () => {
                   Entre em Contato
                 </Button>
               </div>
+              */}
             </div>
 
             {/* Quick Contact Info */}
             <div className="flex flex-wrap gap-6 pt-8 border-t border-border">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-warm-brown" />
-                <span>(11) 9999-9999</span>
+                <span>(11) 96829-6877</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-warm-brown" />

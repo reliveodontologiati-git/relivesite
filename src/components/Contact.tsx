@@ -189,7 +189,7 @@ const Contact = () => {
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder="(11) 99999-9999"
+                        placeholder="(11) 96829-6877"
                       />
                     </div>
                     <div className="space-y-2">

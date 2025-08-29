@@ -118,10 +118,13 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                  {/* Botão "Saiba Mais" escondido conforme solicitado */}
+                  {/*
                   <Button variant="ghost" className="w-full group/btn">
                     Saiba Mais
                     <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
+                  */}
                 </CardContent>
               </Card>
             ))}
@@ -162,10 +165,13 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                  {/* Botão "Saiba Mais" escondido conforme solicitado */}
+                  {/*
                   <Button variant="ghost" className="w-full group/btn">
                     Saiba Mais
                     <ArrowRight className="h-4 w-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
+                  */}
                 </CardContent>
               </Card>
             ))}
@@ -181,10 +187,13 @@ const Services = () => {
             <p className="text-muted-foreground mb-6">
               Agende uma avaliação gratuita e descubra o tratamento ideal para você.
             </p>
+            {/* Botão de agendamento escondido conforme solicitado */}
+            {/*
             <Button variant="hero" size="lg">
               <Calendar className="h-5 w-5 mr-2" />
               Agendar Avaliação Gratuita
             </Button>
+            */}
           </div>
         </div>
       </div>

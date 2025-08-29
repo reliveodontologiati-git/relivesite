@@ -73,16 +73,19 @@ const Navigation = () => {
           </div>
 
           {/* Action Buttons */}
+          {/* Botões de ação escondidos conforme solicitado */}
+          {/*
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="ghost" size="sm">
               <Phone className="h-4 w-4 mr-2" />
-              (11) 9999-9999
+              (11) 96829-6877
             </Button>
             <Button variant="hero" size="sm">
               <Calendar className="h-4 w-4 mr-2" />
               Agendar
             </Button>
           </div>
+          */}
 
           {/* Mobile Menu Button */}
           <Button
@@ -132,16 +135,19 @@ const Navigation = () => {
                   </Link>
                 )
               ))}
+              {/* Botões mobile escondidos conforme solicitado */}
+              {/*
               <div className="pt-4 space-y-2">
                 <Button variant="ghost" size="sm" className="w-full justify-start">
                   <Phone className="h-4 w-4 mr-2" />
-                  (11) 9999-9999
+                  (11) 96829-6877
                 </Button>
                 <Button variant="hero" size="sm" className="w-full">
                   <Calendar className="h-4 w-4 mr-2" />
                   Agendar Consulta
                 </Button>
               </div>
+              */}
             </div>
           </div>
         )}
