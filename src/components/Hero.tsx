@@ -9,8 +9,8 @@ const Hero = () => {
           {/* Hero Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="flex justify-center lg:justify-start">
-                <div className="w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-auto">
+              <div className="flex justify-center">
+                <div className="w-64 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] h-auto">
                   <img 
                     src="/lovable-uploads/d952346d-8c5f-490e-8941-e2ab32765cb0.png"
                     alt="Relive Odontologia e Estética"
