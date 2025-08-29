@@ -52,7 +52,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-warm-brown" />
-                <span>São Paulo, SP</span>
+                <span>Bragança Paulista, SP</span>
               </div>
             </div>
           </div>
