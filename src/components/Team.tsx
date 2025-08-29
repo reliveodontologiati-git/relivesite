@@ -47,7 +47,8 @@ const Team = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="flex justify-center">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl">
           {teamMembers.map((member, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 shadow-soft overflow-hidden">
               <div className="relative overflow-hidden">
@@ -112,6 +113,7 @@ const Team = () => {
               </CardContent>
             </Card>
           ))}
+          </div>
         </div>
 
         {/* Team Stats */}
