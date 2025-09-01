@@ -12,15 +12,22 @@ import {
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Rafael Mendes",
+      name: "Dr. Stanley Rangel Junior",
       role: "Cirurgião-Dentista",
-      specialty: "Implantodontia e Próteses",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      credentials: ["CRO-SP 789012", "Especialista em Implantodontia", "Mestrado em Prótese"],
-      experience: "15 anos"
+      specialty: "Ortodontia e Harmonização Orofacial",
+      image: "/lovable-uploads/bc089ab5-c7ca-480f-853a-a9d7beada411.png",
+      credentials: [
+        "CRO-SP 107957",
+        "Especialista em Ortodontia e Ortopedia Funcional dos Maxilares desde 2013",
+        "Especialista em Harmonização Orofacial desde 2024",
+        "Atualização em Implantodontia",
+        "Atualização em Cirurgia Oral Menor",
+        "Harmonização OroFacial Avançado"
+      ],
+      experience: "11 anos"
     },
     {
-      name: "Dra. Nubia Campos",
+      name: "Enf. Nubia Campos",
       role: "Enfermeira Esteta",
       specialty: "Harmonização Corporal e Laserterapia",
       image: "/lovable-uploads/2a35d284-6419-4109-a9e2-a5aa03ffcfb0.png",
