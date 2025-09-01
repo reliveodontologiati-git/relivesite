@@ -55,7 +55,7 @@ const Services = () => {
     },
     {
       icon: <Sparkles className="h-8 w-8" />,
-      title: "Preenchimento Labial",
+      title: "Harmonização Corporal",
       description: "Volume e definição natural dos lábios",
       features: ["Ácido hialurônico", "Contorno labial", "Hidratação"]
     },
