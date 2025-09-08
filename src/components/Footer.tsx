@@ -177,7 +177,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-600">
           <div className="text-center">
             <p className="text-xs text-gray-500 mb-2">
-              Responsável Técnico: Dra. Ana Carolina Silva - CRO-SP 123456
+              Responsável Técnico: Dr. Stanley Rangel Junior - CRO-SP 107957
             </p>
             <p className="text-xs text-gray-500">
               Este site segue as normas do Código de Ética Odontológica e CFO
