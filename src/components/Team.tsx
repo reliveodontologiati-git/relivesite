@@ -15,7 +15,7 @@ const Team = () => {
       name: "Dr. Stanley Rangel Junior",
       role: "Cirurgião-Dentista",
       specialty: "Ortodontia e Harmonização Orofacial",
-      image: "/lovable-uploads/bc089ab5-c7ca-480f-853a-a9d7beada411.png",
+      image: "/lovable-uploads/e466acf3-25d9-404c-b6f0-c63b0c7749ef.png",
       credentials: [
         "CRO-SP 107957",
         "Especialista em Ortodontia e Ortopedia Funcional dos Maxilares desde 2013",
