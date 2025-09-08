@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { 
   GraduationCap, 
   Award, 
-  Calendar,
+  Users,
   Linkedin,
   Instagram 
 } from "lucide-react";
@@ -151,12 +151,12 @@ const Team = () => {
 
           <Card className="text-center p-8 border-0 shadow-elegant gradient-warm">
             <CardContent className="p-0">
-              <Calendar className="h-12 w-12 text-warm-brown mx-auto mb-4" />
+              <Users className="h-12 w-12 text-warm-brown mx-auto mb-4" />
               <div className="text-3xl font-playfair font-bold text-warm-brown mb-2">
-                24h
+                500+
               </div>
               <div className="text-sm text-muted-foreground">
-                Atendimento de Emergência
+                Pacientes Atendidos
               </div>
             </CardContent>
           </Card>
