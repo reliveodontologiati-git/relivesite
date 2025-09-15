@@ -30,14 +30,14 @@ Este projeto foi configurado para executar em container Docker com Nginx e proxy
 
 ## Comandos para Build e Deploy
 
-### 1. Build da Imagem
+### 1. Build e Subir o Container (com Traefik)
 ```bash
-docker build -t site:latest .
-```
+# Build e deploy em um comando
+docker-compose up -d --build
 
-### 2. Subir o Container (com Traefik)
-```bash
-docker-compose up -d
+# Ou separadamente:
+# docker build -t site:latest .
+# docker-compose up -d
 ```
 
 ### 3. Verificar Status
@@ -53,10 +53,22 @@ docker-compose down
 
 ## Requisitos
 
-- Docker e Docker Compose instalados
+- Docker e Docker Compose instalados na VPS
 - Rede externa `rede_mibi` criada
 - Traefik configurado na mesma rede
 - DNS apontando `portal.mibitech.com.br` para o servidor
+- Arquivos do projeto copiados para a VPS (incluindo .env)
+
+## Setup na VPS
+
+### 1. Copiar arquivos para VPS
+```bash
+# Fazer upload dos arquivos via scp, rsync ou git clone
+scp -r projeto/ usuario@vps:/caminho/destino/
+
+# Ou via git
+git clone <repositorio> /caminho/destino/
+```
 
 ## Criação da Rede (se necessário)
 ```bash

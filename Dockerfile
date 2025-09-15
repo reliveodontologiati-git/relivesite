@@ -1,11 +1,21 @@
 # Dockerfile para aplicação React (Vite)
 FROM node:20-alpine AS build
 WORKDIR /app
+
+# Copiar arquivos de dependências
 COPY package*.json ./
 COPY bun.lockb ./
-COPY src/assets/ ./src/assets/       
-RUN npm install
+
+# Instalar dependências
+RUN npm ci --only=production
+
+# Copiar código fonte
 COPY . .
+
+# Copiar arquivo .env para build
+COPY .env .env
+
+# Build da aplicação
 RUN npm run build
 
 FROM nginx:alpine

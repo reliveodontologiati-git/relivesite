@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   frontend:
+    build: .
     image: site:latest
     container_name: site
     environment:
@@ -8,6 +9,7 @@ services:
       - DEBUG=false
     expose:
       - 80
+    restart: unless-stopped
     deploy:
       replicas: 1
       labels:
