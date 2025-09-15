@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  frontend:
+    image: site:latest
+    container_name: site
+    environment:
+      - NODE_ENV=production
+      - DEBUG=false
+    expose:
+      - 80
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.site.rule=Host(`portal.mibitech.com.br`)"
+        - "traefik.http.routers.site.entrypoints=websecure"
+        - "traefik.http.routers.site.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.site.loadbalancer.server.port=80"
+        - "traefik.http.routers.site.priority=1"
+        - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
+        - "traefik.http.services.site.loadbalancer.passHostHeader=true"
+        - "traefik.http.routers.site.middlewares=sslheader"
+    networks:
+      - rede_mibi
+
+networks:
+  rede_mibi:
+    external: true
