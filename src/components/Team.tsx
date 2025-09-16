@@ -24,7 +24,7 @@ const Team = () => {
         "Atualização em Cirurgia Oral Menor",
         "Harmonização OroFacial Avançado"
       ],
-      experience: "11 anos"
+      experience: "18 anos"
     },
     {
       name: "Enf. Nubia Campos",
