@@ -16,9 +16,9 @@ const Services = () => {
   const odontologyServices = [
     {
       icon: <Smile className="h-8 w-8" />,
-      title: "Limpeza Dental",
+      title: "Lente de Contato",
       description: "Profilaxia completa com ultrassom e polimento",
-      features: ["Remoção de tártaro", "Polimento", "Flúor aplicação"]
+      features: ["Porcelana", "Resina"]
     },
     {
       icon: <Shield className="h-8 w-8" />,
@@ -61,7 +61,7 @@ const Services = () => {
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Tratamento de Acne",
+      title: "Limpeza de Pele",
       description: "Protocolos personalizados para pele saudável",
       features: ["Limpeza profunda", "LED terapia", "Orientação domiciliar"]
     }

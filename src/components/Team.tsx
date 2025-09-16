@@ -24,7 +24,7 @@ const Team = () => {
         "Atualização em Cirurgia Oral Menor",
         "Harmonização OroFacial Avançado"
       ],
-      experience: "11 anos"
+      experience: "18 anos"
     },
     {
       name: "Enf. Nubia Campos",
@@ -68,12 +68,16 @@ const Team = () => {
                 
                 {/* Social Icons */}
                 <div className="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button variant="secondary" size="sm" className="h-8 w-8 p-0">
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                  <Button variant="secondary" size="sm" className="h-8 w-8 p-0">
-                    <Instagram className="h-4 w-4" />
-                  </Button>
+                  {member.name === "Enf. Nubia Campos" && (
+                    <Button 
+                      variant="secondary" 
+                      size="sm" 
+                      className="h-8 w-8 p-0"
+                      onClick={() => window.open("https://www.instagram.com/nubiacampos.enf?igsh=b3l6ZjZ0dGloa3M1", "_blank")}
+                    >
+                      <Instagram className="h-4 w-4" />
+                    </Button>
+                  )}
                 </div>
               </div>
               
