@@ -73,7 +73,7 @@ const Team = () => {
                       variant="secondary" 
                       size="sm" 
                       className="h-8 w-8 p-0"
-                      onClick={() => window.open("https://www.instagram.com/nubiacampos.enf", "_blank")}
+                      onClick={() => window.open("https://www.instagram.com/nubiacampos.enf?igsh=b3l6ZjZ0dGloa3M1", "_blank")}
                     >
                       <Instagram className="h-4 w-4" />
                     </Button>
