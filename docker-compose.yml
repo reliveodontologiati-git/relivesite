@@ -2,8 +2,8 @@ version: '3.8'
 services:
   frontend:
     build: .
-    image: site:latest
-    container_name: site
+    image: relivesite:latest
+    container_name: relivesite
     environment:
       - NODE_ENV=production
       - DEBUG=false
@@ -14,14 +14,14 @@ services:
       replicas: 1
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.site.rule=Host(`portal.mibitech.com.br`)"
-        - "traefik.http.routers.site.entrypoints=websecure"
-        - "traefik.http.routers.site.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.site.loadbalancer.server.port=80"
-        - "traefik.http.routers.site.priority=1"
+        - "traefik.http.routers.relivesite.rule=Host(`www.clinicarelive.com.br`)"
+        - "traefik.http.routers.relivesite.entrypoints=websecure"
+        - "traefik.http.routers.relivesite.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.relivesite.loadbalancer.server.port=80"
+        - "traefik.http.routers.relivesite.priority=1"
         - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
-        - "traefik.http.services.site.loadbalancer.passHostHeader=true"
-        - "traefik.http.routers.site.middlewares=sslheader"
+        - "traefik.http.services.relivesite.loadbalancer.passHostHeader=true"
+        - "traefik.http.routers.relivesite.middlewares=sslheader"
     networks:
       - rede_mibi
 
